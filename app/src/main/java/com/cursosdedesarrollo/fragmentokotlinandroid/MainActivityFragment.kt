@@ -1,11 +1,14 @@
 package com.cursosdedesarrollo.fragmentokotlinandroid
 
-import android.support.v4.app.Fragment
+
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.fragment_main.*
+import android.widget.TextView
+import androidx.fragment.app.Fragment
+
 
 /**
  * A placeholder fragment containing a simple view.
@@ -19,8 +22,10 @@ class MainActivityFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val button = getView()?.findViewById<View>(R.id.button) as TextView
+        val texto = getView()?.findViewById<View>(R.id.texto) as TextView
         button.setOnClickListener({
-            texto.text="Texto Cambiado"
+            texto.text = "Texto Cambiado"
         })
     }
 
