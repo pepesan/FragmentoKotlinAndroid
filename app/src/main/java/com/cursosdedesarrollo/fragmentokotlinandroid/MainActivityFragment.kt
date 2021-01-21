@@ -24,9 +24,9 @@ class MainActivityFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val button = getView()?.findViewById<View>(R.id.button) as TextView
         val texto = getView()?.findViewById<View>(R.id.texto) as TextView
-        button.setOnClickListener({
-            texto.text = "Texto Cambiado"
-        })
+        button.setOnClickListener {
+            texto.text = getString(R.string.main_fragment_text)
+        }
     }
 
 
